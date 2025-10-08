@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	fmt.Println("redis url schema:", os.Getenv("URL"))
 	opt, err := redis.ParseURL(os.Getenv("URL"))
 	if err != nil {
 		panic(err)
